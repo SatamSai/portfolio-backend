@@ -22,7 +22,7 @@ let cache = apicache.middleware;
 const API_URL = process.env.LEETCODE_API_URL || 'https://leetcode.com/graphql';
 
 const limiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
+  windowMs: 60 * 1000, // 1 hour
   limit: 60,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
