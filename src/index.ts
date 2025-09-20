@@ -1,4 +1,6 @@
 import app from './app';
-import serverless from 'serverless-http';
+import config from './config';
 
-export const handler = serverless(app);
+app.listen(config.port, () => {
+  console.log(`Server is running at => http://localhost:${config.port} ⚙️`);
+});
